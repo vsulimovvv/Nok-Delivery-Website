@@ -7,6 +7,9 @@
   --color-green: #2BC36F;
   --color-dark: #444444;
   --color-blue-dark: #23538A;
+
+  // * ==== Gradients
+  --gradient: linear-gradient(225deg, #2086A6 0%, #2BC36F 98.23%);
 }
 
 // * breakpointsMaxW
@@ -18,7 +21,10 @@ $bp-576: 576px;
 $bp-420: 420px;
 
 // *=== Fonts
-$Gilroy: 'Gilroy';
+$Roboto: 'Roboto';
+$Montserrat: 'Montserrat';
+$Circe: 'Circe';
+$SFProText: 'SFProText';
 
 // * ==== Z-Index
 $z-1: 1;

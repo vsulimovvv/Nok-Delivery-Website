@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: $Circe;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -110,8 +110,23 @@ body {
   }
 }
 
-.logo {
-  display: block;
-  width: 132px;
-  height: 85px;
+// .logo {
+//   display: block;
+//   width: 132px;
+//   height: 85px;
+// }
+
+.text-accent {
+  color: var(--color-green);
+}
+
+.btn {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  background: var(--color-blue-dark);
+  color: var(--color-white);
+  padding: 18px 21px;
+  border-radius: 150px;
 }

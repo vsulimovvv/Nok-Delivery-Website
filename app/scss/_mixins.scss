@@ -16,8 +16,7 @@
   }
 }
 
-
-//  calc(28px + (36 - 28) * ((100vw - 320px) / (1170 - 320)));
+//  calc(28px + (36 - 28) * ((100vw - 375px) / (1170 - 375)));
 
 @mixin afterIcon($image, $w, $h) {
   background-image: $image;
