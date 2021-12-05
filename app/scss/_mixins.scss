@@ -17,7 +17,7 @@
 }
 
 
-//  margin-bottom: calc(28px + (36 - 28) * ((100vw - 320px) / (1225 - 320)));
+//  calc(28px + (36 - 28) * ((100vw - 320px) / (1170 - 320)));
 
 @mixin afterIcon($image, $w, $h) {
   background-image: $image;
@@ -56,4 +56,3 @@
   position: absolute;
   content: '';
 }
-

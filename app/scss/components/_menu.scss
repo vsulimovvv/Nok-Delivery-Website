@@ -1,0 +1,18 @@
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: var(--color-white);
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__tools {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}

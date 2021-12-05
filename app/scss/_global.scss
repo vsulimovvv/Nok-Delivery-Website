@@ -1,8 +1,8 @@
 body {
-  font-family: $Gilroy;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 20px;
   color: var(--color-dark);
   background-color: var(--color-white);
   position: relative;
@@ -13,14 +13,14 @@ body {
   }
 }
 
+.main {
+  padding-top: 103px;
+}
+
 .container {
   max-width: $bp-container;
   padding: 0px 15px;
   margin: 0 auto;
-
-  @include breakpointsMaxW($bp-768) {
-    padding: 0 10px;
-  }
 }
 
 .container-fluid {
@@ -108,4 +108,10 @@ body {
     visibility: visible;
     bottom: 25px;
   }
+}
+
+.logo {
+  display: block;
+  width: 132px;
+  height: 85px;
 }

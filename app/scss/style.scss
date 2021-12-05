@@ -6,5 +6,7 @@
 @import 'global';
 
 @import './animations';
-@import './components/header.scss';
-@import './components/footer';
+@import './components/sections/header';
+@import './components/sections/footer';
+@import './components/menu';
+@import './components/sections/hero';

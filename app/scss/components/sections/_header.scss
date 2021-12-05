@@ -1,0 +1,14 @@
+.header {
+  // background-color: var(--color-green);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 9px 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
