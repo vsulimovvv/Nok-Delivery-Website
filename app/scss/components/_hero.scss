@@ -1,0 +1,41 @@
+.hero {
+  height: 100vh;
+  margin-top: -103px;
+  padding-top: 100px;
+  background: var(--gradient);
+  color: var(--color-white);
+
+  &__offer {
+    max-width: 585px;
+  }
+
+  &__overtitle {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 28px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 1;
+    margin-bottom: 8px;
+
+    @include breakpointsMaxW($bp-container) {
+      font-size: calc(30px + (75 - 30) * ((100vw - 375px) / (1170 - 375)));
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &__btn {
+    max-width: 212px;
+    width: 100%;
+  }
+}

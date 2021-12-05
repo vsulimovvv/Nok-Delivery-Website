@@ -1,0 +1,75 @@
+.steps-card {
+  width: 100%;
+  position: relative;
+  padding-left: 100px;
+  padding-top: 100px;
+
+  &--download {
+    .steps-card {
+      &__img {
+        background-color: var(--color-purple);
+
+        &::after {
+          @include backgroundImage(url('../images/icons/step-1.svg'), contain);
+        }
+      }
+    }
+  }
+
+  &--compare {
+    .steps-card {
+      &__img {
+        background-color: #25A18E;
+
+        &::after {
+          @include backgroundImage(url('../images/content/steps/2.png'), contain);
+        }
+      }
+    }
+  }
+
+  &--service {
+    .steps-card {
+      &__img {
+        background-color: var(--color-green);
+
+        &::after {
+          @include backgroundImage(url('../images/content/steps/3.png'), contain);
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__img {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #f00;
+    left: 0;
+    top: 75px;
+
+    &::after {
+      @include pseudoElDefault();
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &__text {
+    line-height: 20px;
+  }
+}

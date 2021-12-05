@@ -2,7 +2,7 @@ body {
   font-family: $Circe;
   font-weight: 400;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1;
   color: var(--color-dark);
   background-color: var(--color-white);
   position: relative;
@@ -58,24 +58,6 @@ body {
   }
 }
 
-.section-title {
-  font-weight: bold;
-
-  font-size: calc(20px + (36 - 20) * ((100vw - 320px) / (1225 - 320)));
-  line-height: calc(30px + (48 - 30) * ((100vw - 320px) / (1225 - 320)));
-
-  @include breakpointsMinW($bp-container) {
-    font-size: 36px;
-    line-height: 48px;
-  }
-
-  @include breakpointsMaxW($bp-768) {
-    text-align: center;
-    margin: 0 auto;
-  }
-}
-
-
 // Scroll Top
 .scroll {
   position: fixed;
@@ -121,6 +103,7 @@ body {
 }
 
 .btn {
+  display: block;
   font-weight: bold;
   font-size: 12px;
   line-height: 12px;
@@ -129,4 +112,63 @@ body {
   color: var(--color-white);
   padding: 18px 21px;
   border-radius: 150px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #f3f3f3;
+  border-radius: 50%;
+  top: 70%;
+  transform: translateY(-50%);
+  transition: 250ms ease;
+
+  &:hover {}
+
+  &::after {
+    @include pseudoElDefault();
+    width: 45px;
+    height: 23px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--color-green);
+    transition: 250ms ease;
+  }
+}
+
+.swiper-button-next {
+  &:hover {
+    transform: translateY(-50%) translateX(-7px);
+
+    &::after {
+      right: -20px;
+    }
+  }
+
+  right: -67px;
+
+  &::after {
+    right: 0;
+    @include maskImage(url('../images/sprite.svg#arrow'), cover);
+  }
+}
+
+.swiper-button-prev {
+  left: -67px;
+
+  &:hover {
+    transform: translateY(-50%) translateX(7px);
+
+    &::after {
+      left: -20px;
+    }
+  }
+
+  &::after {
+    left: 0;
+    @include maskImage(url('../images/sprite.svg#arrow'), cover);
+    transform: translateY(-50%) rotate(180deg);
+  }
 }

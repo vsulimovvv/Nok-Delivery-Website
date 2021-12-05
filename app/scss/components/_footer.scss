@@ -1,0 +1,99 @@
+.footer {
+  background: var(--gradient);
+  color: var(--color-white);
+
+  &__top {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpointsMaxW($bp-768) {
+      flex-direction: column;
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      padding-top: 125px;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid var(--color-white);
+
+    @include breakpointsMaxW($bp-768) {
+      border-top: none;
+    }
+  }
+
+  &__bottom-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+
+    @include breakpointsMaxW($bp-768) {
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    @include breakpointsMaxW($bp-768) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__tools {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    @include breakpointsMaxW($bp-768) {
+      background: rgba(255, 255, 255, 0.4);
+      box-shadow: 0px 10px 25px rgba(38, 38, 38, 0.25);
+      backdrop-filter: blur(25px);
+      border-radius: 20px;
+      padding: 8px 18px 18px;
+
+      flex-direction: column;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+
+  &__action {
+    width: 130px;
+    height: 40px;
+
+    &--android {
+      @include backgroundImage(url('../images/button-google-play.png'), contain);
+    }
+
+    &--ios {
+      @include backgroundImage(url('../images/button-google-play.png'), contain);
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  &__copy {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__scammer {
+    width: 30px;
+    height: 30px;
+    @include backgroundImage(url('../images/icons/scammer.svg'), cover);
+
+    @include breakpointsMaxW($bp-768) {
+      display: none;
+    }
+  }
+}

@@ -6,9 +6,18 @@
 @import 'global';
 
 @import './animations';
-@import './components/sections/header';
-@import './components/sections/footer';
+@import './components/header';
+@import './components/footer';
 @import './components/menu';
-@import './components/sections/hero';
-@import './components/sections/section-advantages';
-@import './components/sections/section-about-text';
+@import './components/hero';
+@import './components/section-advantages';
+@import './components/section-about-text';
+@import './components/section-about';
+@import './components/cards/product-category-card';
+@import './components/section-categories';
+@import './components/section-steps';
+@import './components/cards/step-card';
+@import './components/section-download';
+@import './components/section-contacts';
+@import './components/socials';
+// @import './components/sections/section-category';

@@ -1,0 +1,25 @@
+.steps {
+  padding: 80px 0;
+  background-color: var(--color-background);
+
+  &__top {
+    margin-bottom: 14px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 45px;
+    margin-bottom: 8px;
+  }
+
+  &__descr {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 58px;
+  }
+}

@@ -1,0 +1,97 @@
+.advantages {
+  padding-top: 70px;
+  padding-bottom: 80px;
+
+  @include breakpointsMaxW($bp-container) {
+    padding-top: calc(43px + (70 - 43) * ((100vw - 375px) / (1170 - 375)));
+    padding-bottom: calc(43px + (80 - 43) * ((100vw - 375px) / (1170 - 375)));
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 19px;
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 265px;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.05);
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    padding: 20px;
+    max-width: 367px;
+    width: 100%;
+    position: relative;
+    justify-self: center;
+
+    @include breakpointsMaxW($bp-991) {
+      height: calc(200px + (265 - 200) * ((100vw - 320px) / (1170 - 320)));
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      height: calc(200px + (265 - 200) * ((100vw - 320px) / (1170 - 320)));
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    &::after {
+      @include pseudoElDefault();
+      width: 166px;
+      height: 166px;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include breakpointsMaxW($bp-container) {
+        top: 16px;
+      }
+
+      @include breakpointsMaxW($bp-991) {
+        // width: calc(104px + (166 - 104) * ((100vw - 320px) / (1170 - 320)));
+        // height: calc(104px + (166 - 104) * ((100vw - 320px) / (1170 - 320)));
+        width: 104px;
+        height: 104px;
+      }
+    }
+
+    &:nth-child(1) {
+      &::after {
+        // @include backgroundImage(url('../images/icons/adv-1.svg'), contain);
+        @include backgroundImage(url('../images/content/advantages/1.png'), contain);
+      }
+    }
+
+    &:nth-child(2) {
+      .advantages__text {
+        max-width: 175px;
+      }
+
+      &::after {
+        // @include backgroundImage(url('../images/icons/adv-1.svg'), contain);
+        @include backgroundImage(url('../images/content/advantages/1.png'), contain);
+      }
+    }
+
+    &:nth-child(3) {
+      &::after {
+        // @include backgroundImage(url('../images/icons/adv-1.svg'), contain);
+        @include backgroundImage(url('../images/content/advantages/1.png'), contain);
+      }
+    }
+  }
+
+  &__text {
+    max-width: 300px;
+  }
+}

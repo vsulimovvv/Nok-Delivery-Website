@@ -1,0 +1,164 @@
+.download {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__title {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include breakpointsMaxW($bp-container) {
+      font-size: calc(30px + (45 - 30) * ((100vw - 375px) / (1170 - 375)));
+      line-height: 1;
+    }
+
+    span {
+      color: var(--color-blue-dark);
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 100px;
+
+    position: relative;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+      padding-top: 215px;
+      gap: 0;
+    }
+  }
+
+  &__accent {
+    display: inline-block;
+    color: var(--color-green);
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 16px;
+
+    @include breakpointsMaxW($bp-container) {
+      font-size: calc(18px + (22 - 18) * ((100vw - 375px) / (1170 - 375)));
+      line-height: 1;
+    }
+  }
+
+  &__preview {
+    width: 218px;
+    height: 436px;
+    @include background(cover);
+    filter: drop-shadow(22.0631px 17.1602px 22.8802px rgba(0, 0, 0, 0.09));
+
+    @include breakpointsMaxW($bp-991) {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 1;
+    }
+  }
+
+  &__col {
+    padding-top: 60px;
+
+    &--ios {
+      text-align: right;
+
+      .download__btn {
+        margin-left: auto;
+      }
+
+      .download__item {
+        justify-content: flex-end;
+
+        @include breakpointsMaxW($bp-991) {
+          justify-content: flex-start;
+
+          .download__number {
+            order: -1;
+          }
+        }
+      }
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      justify-self: center;
+      background-color: var(--color-white);
+      z-index: 2;
+      padding-top: 48px;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    margin-bottom: 13px;
+
+    @include breakpointsMaxW($bp-991) {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    line-height: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+
+      @include breakpointsMaxW($bp-container) {
+        margin-bottom: calc(8px + (28 - 8) * ((100vw - 375px) / (1170 - 375)));
+      }
+    }
+  }
+
+  &__number {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--color-blue-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    flex-shrink: 0;
+  }
+
+  &__text {
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 130px;
+    height: 40px;
+    @include backgroundImage(url('../images/button-google-play.png'), contain);
+
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
+  }
+
+  &__btns {
+    display: none;
+
+    @include breakpointsMaxW($bp-991) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      .download__btn {
+        display: block;
+      }
+    }
+  }
+}
