@@ -1,0 +1,80 @@
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  background-color: rgba(36, 36, 36, 0.9);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    background-color: var(--color-white);
+    max-width: 945px;
+    padding: 75px 29px 47px 29px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 20px;
+    // max-width: 260px;
+
+    span {
+      color: var(--color-blue-dark);
+    }
+  }
+
+  &__subtitle {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--color-green);
+    margin-bottom: 7px;
+  }
+
+  &__content {
+    p {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 19px;
+
+    &:not(:last-child) {
+      margin-bottom: 41px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+  }
+
+  &__icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(37, 161, 142, 0.2);
+
+    &::before {
+      @include pseudoElDefault();
+      width: 19px;
+      height: 19px;
+      @include maskImage(url('../images/sprite.svg#arrow'), contain);
+      background-color: var(--color-green);
+      top: 50%;
+      transform: translateY(-50%);
+      right: -8px;
+    }
+  }
+}
