@@ -21,5 +21,25 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 58px;
+
+    @include breakpointsMaxW($bp-991) {
+      gap: 30px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+
+    @include breakpointsMaxW($bp-768) {
+      max-width: 320px;
+    }
   }
 }

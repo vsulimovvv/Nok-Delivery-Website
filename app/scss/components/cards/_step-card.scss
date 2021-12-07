@@ -4,6 +4,14 @@
   padding-left: 100px;
   padding-top: 100px;
 
+  @include breakpointsMaxW($bp-991) {
+    padding-left: 0;
+  }
+
+  @include breakpointsMaxW($bp-768) {
+    text-align: center;
+  }
+
   &--download {
     .steps-card {
       &__img {
@@ -49,9 +57,14 @@
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    background-color: #f00;
     left: 0;
     top: 75px;
+
+    @include breakpointsMaxW($bp-991) {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
     &::after {
       @include pseudoElDefault();
