@@ -2,6 +2,11 @@
   padding: 80px 0;
   background-color: var(--color-background);
 
+  @include breakpointsMaxW($bp-container) {
+    padding-top: calc(30px + (80 - 30) * ((100vw - 375px) / (1170 - 375)));
+    padding-bottom: calc(30px + (80 - 30) * ((100vw - 375px) / (1170 - 375)));
+  }
+
   &__top {
     margin-bottom: 14px;
   }
@@ -10,6 +15,14 @@
     font-weight: bold;
     font-size: 45px;
     margin-bottom: 8px;
+
+    @include breakpointsMaxW($bp-container) {
+      font-size: calc(30px + (45 - 30) * ((100vw - 375px) / (1170 - 375)));
+    }
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: 11px;
+    }
   }
 
   &__descr {

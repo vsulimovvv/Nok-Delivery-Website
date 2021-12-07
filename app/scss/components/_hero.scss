@@ -1,15 +1,11 @@
 .hero {
-  height: 100vh;
-  margin-top: -103px;
-  padding-top: 100px;
   color: var(--color-white);
   position: relative;
   z-index: 5;
   background: var(--gradient);
 
-  &::after {
-    @include pseudoElDefault();
-
+  &__overlay {
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
@@ -17,19 +13,86 @@
     z-index: -1;
     background-image: url('../images/content/hero/hero-bg.png');
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right bottom;
+    background-size: 39%;
+    background-position: 100% 100%;
+
+
+    @include breakpointsMinW(1440px) {
+      background-size: 35%;
+      // background-position: right center;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      background-image: url('../images/content/hero/hero-bg-mobile.png');
+      background-size: 45%;
+      background-position: center bottom;
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      background-size: 65%;
+    }
+
+    @include breakpointsMaxW($bp-420) {
+      background-size: 90%;
+      background-position: 100% 100%;
+    }
+  }
+
+  &__wrapper {
+    padding-top: 100px;
+    margin-top: -103px;
+    width: 100%;
+    height: 100vh;
+    max-height: 960px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include breakpointsMaxW($bp-container) {
+      max-height: calc(700px + (960 - 700) * ((100vw - 375px) / (1170 - 375)));
+    }
   }
 
   &__offer {
     max-width: 585px;
+    margin-top: -100px;
+
+    @include breakpointsMaxW($bp-container) {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0px 10px 25px rgba(38, 38, 38, 0.25);
+      backdrop-filter: blur(25px);
+      border-radius: 20px;
+      color: var(--color-dark);
+      padding: 25px;
+
+      .text-accent {
+        color: var(--color-blue-dark)
+      }
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      position: absolute;
+      max-width: 90%;
+      width: calc(100% - 40px);
+      bottom: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__overtitle {
+    max-width: 100%;
     display: inline-block;
     font-size: 24px;
     line-height: 28px;
     margin-bottom: 28px;
+
+    @include breakpointsMaxW($bp-container) {
+      font-size: calc(14px + (24 - 14) * ((100vw - 375px) / (1170 - 375)));
+      line-height: calc(18px + (28 - 18) * ((100vw - 375px) / (1170 - 375)));
+      max-width: calc(170px + (300 - 170) * ((100vw - 375px) / (1170 - 375)));
+      margin-bottom: calc(8px + (28 - 8) * ((100vw - 375px) / (1170 - 375)));
+    }
   }
 
   &__title {
@@ -40,14 +103,31 @@
 
     @include breakpointsMaxW($bp-container) {
       font-size: calc(30px + (75 - 30) * ((100vw - 375px) / (1170 - 375)));
+      margin-bottom: calc(3px + (8 - 3) * ((100vw - 375px) / (1170 - 375)));
     }
   }
 
   &__text {
     margin-bottom: 30px;
-    font-weight: bold;
     font-size: 16px;
     line-height: 26px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(10px + (30 - 10) * ((100vw - 375px) / (1170 - 375)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    span {
+      font-weight: 700;
+
+      @include breakpointsMaxW($bp-991) {
+        font-weight: 400;
+      }
+    }
   }
 
   &__btn {

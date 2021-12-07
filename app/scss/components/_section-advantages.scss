@@ -3,8 +3,11 @@
   padding-bottom: 80px;
 
   @include breakpointsMaxW($bp-container) {
-    padding-top: calc(43px + (70 - 43) * ((100vw - 375px) / (1170 - 375)));
     padding-bottom: calc(43px + (80 - 43) * ((100vw - 375px) / (1170 - 375)));
+  }
+
+  @include breakpointsMaxW($bp-991) {
+    padding-top: 125px;
   }
 
   &__items {
@@ -70,8 +73,6 @@
       }
 
       @include breakpointsMaxW($bp-991) {
-        // width: calc(104px + (166 - 104) * ((100vw - 320px) / (1170 - 320)));
-        // height: calc(104px + (166 - 104) * ((100vw - 320px) / (1170 - 320)));
         width: 104px;
         height: 104px;
       }
@@ -79,7 +80,6 @@
 
     &:nth-child(1) {
       &::after {
-        // @include backgroundImage(url('../images/icons/adv-1.svg'), contain);
         @include backgroundImage(url('../images/content/advantages/1.png'), contain);
       }
     }
@@ -90,15 +90,13 @@
       }
 
       &::after {
-        // @include backgroundImage(url('../images/icons/adv-1.svg'), contain);
-        @include backgroundImage(url('../images/content/advantages/1.png'), contain);
+        @include backgroundImage(url('../images/content/advantages/2.png'), contain);
       }
     }
 
     &:nth-child(3) {
       &::after {
-        // @include backgroundImage(url('../images/icons/adv-1.svg'), contain);
-        @include backgroundImage(url('../images/content/advantages/1.png'), contain);
+        @include backgroundImage(url('../images/content/advantages/3.png'), contain);
       }
     }
   }

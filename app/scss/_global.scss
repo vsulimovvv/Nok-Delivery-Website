@@ -92,12 +92,6 @@ body {
   }
 }
 
-// .logo {
-//   display: block;
-//   width: 132px;
-//   height: 85px;
-// }
-
 .text-accent {
   color: var(--color-green);
 }
@@ -114,61 +108,3 @@ body {
   border-radius: 150px;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: #f3f3f3;
-  border-radius: 50%;
-  top: 70%;
-  transform: translateY(-50%);
-  transition: 250ms ease;
-
-  &:hover {}
-
-  &::after {
-    @include pseudoElDefault();
-    width: 45px;
-    height: 23px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--color-green);
-    transition: 250ms ease;
-  }
-}
-
-.swiper-button-next {
-  &:hover {
-    transform: translateY(-50%) translateX(-7px);
-
-    &::after {
-      right: -20px;
-    }
-  }
-
-  right: -67px;
-
-  &::after {
-    right: 0;
-    @include maskImage(url('../images/sprite.svg#arrow'), cover);
-  }
-}
-
-.swiper-button-prev {
-  left: -67px;
-
-  &:hover {
-    transform: translateY(-50%) translateX(7px);
-
-    &::after {
-      left: -20px;
-    }
-  }
-
-  &::after {
-    left: 0;
-    @include maskImage(url('../images/sprite.svg#arrow'), cover);
-    transform: translateY(-50%) rotate(180deg);
-  }
-}

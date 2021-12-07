@@ -25,22 +25,69 @@
 
 <body>
   <div class="site-wrapper">
-    
+    <header class="header">
+  <div class="container">
+    <nav class="header__wrapper">
+      <a class="header__logo logo" href="#">
+        <picture>
+          <source srcset="images/logo-mobile.svg" media="(max-width: 1170px)">
+          <img src="images/logo.svg" alt="Логотип">
+        </picture>
+      </a>
+
+      <div class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">О преложении</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Доставка</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Скачать приложение</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Курьерам</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Стать партнером</a>
+          </li>
+        </ul>
+        <div class="menu__tools">
+          <a href="telto:1254586589">+125 458 65 89</a>
+          <a class="btn" href="#">Обратный звонок</a>
+        </div>
+      </div>
+
+      <button class="header__toggle" type="button" aria-label="Открыть меню">
+        <div class="header__toggle-dots">
+          <span class="header__toggle-dot"></span>
+          <span class="header__toggle-dot"></span>
+          <span class="header__toggle-dot"></span>
+          <span class="header__toggle-dot"></span>
+        </div>
+      </button>
+    </nav>
+  </div>
+</header>
     <main class="main">
       <section class="hero">
   <div class="container">
-    <div class="hero__offer">
-      <span class="hero__overtitle">Хотите чего-то большего, чем просто еды? </span>
-      <h1 class="hero__title">Сделайте <span class="text-accent"> «knock- knock»</span>,
-        и мы едем к вам!</h1>
-      <p class="hero__text">NOK Delivery - это не только доставка еды и продуктов питания, но и напитков, одежды,
-        бытовой химии, косметики и парфюмерии, спортивного питания, лекарств, подарков, цветов, товаров для детей и
-        прочего.</p>
+    <div class="hero__wrapper">
+      <div class="hero__offer">
+        <span class="hero__overtitle">Хотите чего-то большего, чем просто еды? </span>
+        <h1 class="hero__title">Сделайте <span class="text-accent"> «knock- knock»</span>,
+          и мы едем к вам!</h1>
+        <p class="hero__text"><span>NOK Delivery</span> - это не только доставка еды и продуктов питания, но и напитков,
+          одежды,
+          бытовой химии, косметики и парфюмерии, спортивного питания, лекарств, подарков, цветов, товаров для детей и
+          прочего.</p>
 
-      <button class="hero__btn btn">Скачать приложение</button>
+        <button class="hero__btn btn">Скачать приложение</button>
+      </div>
     </div>
-
   </div>
+  <div class="hero__overlay"></div>
 </section>
       <section class="advantages">
   <div class="container">
@@ -75,21 +122,240 @@
     <h2 class="visually-hidden">Про нас</h2>
     <ul class="about__items">
       <li class="about__item">
-        <div class="about__img"></div>
         <p class="about__text">Для просмотра доступных заведений, предоставьте доступ к вашему местоположению</p>
       </li>
       <li class="about__item">
-        <div class="about__img"></div>
         <p class="about__text">Курьеры купят и доставят продукты за считанные минуты</p>
       </li>
       <li class="about__item">
-        <div class="about__img"></div>
         <p class="about__text">Заказывайте из любого магазина или ресторана в вашем городе</p>
       </li>
     </ul>
   </div>
 </section>
-      
+      <section class="categories">
+  <div class="container">
+    <h2 class="visually-hidden">Категории товаров</h2>
+    <div class="categories__wrapper">
+      <div class="categories__goods">
+
+        <div class="categories__slider swiper">
+          <ul class="swiper-wrapper categories__items">
+            <li class="categories__item swiper-slide">
+              <article class="product-categories-card">
+                <div class="product-categories-card__img">
+                  <img src="images/content/categories/1.png" alt="Супермаркеты">
+                </div>
+                <div class="product-categories-card__info">
+                  <div class="product-categories-card__overlay"></div>
+                  <div class="product-categories-card__details">
+                    <h3 class="product-categories-card__name">
+                      Супермаркеты
+                    </h3>
+                    <button class="product-categories-card__btn btn">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="categories__item swiper-slide">
+              <article class="product-categories-card">
+
+                <div class="product-categories-card__img">
+                  <img src="images/content/categories/1.png" alt="Супермаркеты">
+                </div>
+                <div class="product-categories-card__info">
+                  <div class="product-categories-card__overlay"></div>
+                  <div class="product-categories-card__details">
+                    <h3 class="product-categories-card__name">
+                      Супермаркеты
+                    </h3>
+                    <button class="product-categories-card__btn btn">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="categories__item swiper-slide">
+              <article class="product-categories-card">
+
+                <div class="product-categories-card__img">
+                  <img src="images/content/categories/1.png" alt="Супермаркеты">
+                </div>
+                <div class="product-categories-card__info">
+                  <div class="product-categories-card__overlay"></div>
+                  <div class="product-categories-card__details">
+                    <h3 class="product-categories-card__name">
+                      Супермаркеты
+                    </h3>
+                    <button class="product-categories-card__btn btn">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="categories__item swiper-slide">
+              <article class="product-categories-card">
+
+                <div class="product-categories-card__img">
+                  <img src="images/content/categories/1.png" alt="Супермаркеты">
+                </div>
+                <div class="product-categories-card__info">
+                  <div class="product-categories-card__overlay"></div>
+                  <div class="product-categories-card__details">
+                    <h3 class="product-categories-card__name">
+                      Супермаркеты
+                    </h3>
+                    <button class="product-categories-card__btn btn">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="categories__item swiper-slide">
+              <article class="product-categories-card">
+                <div class="product-categories-card__img">
+                  <img src="images/content/categories/1.png" alt="Супермаркеты">
+                </div>
+                <div class="product-categories-card__info">
+                  <div class="product-categories-card__overlay"></div>
+                  <div class="product-categories-card__details">
+                    <h3 class="product-categories-card__name">
+                      Супермаркеты
+                    </h3>
+                    <button class="product-categories-card__btn btn">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="categories__item swiper-slide">
+              <article class="product-categories-card">
+
+                <div class="product-categories-card__img">
+                  <img src="images/content/categories/1.png" alt="Супермаркеты">
+                </div>
+                <div class="product-categories-card__info">
+                  <div class="product-categories-card__overlay"></div>
+                  <div class="product-categories-card__details">
+                    <h3 class="product-categories-card__name">
+                      Супермаркеты
+                    </h3>
+                    <button class="product-categories-card__btn btn">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="categories__item swiper-slide">
+              <article class="product-categories-card">
+
+                <div class="product-categories-card__img">
+                  <img src="images/content/categories/1.png" alt="Супермаркеты">
+                </div>
+                <div class="product-categories-card__info">
+                  <div class="product-categories-card__overlay"></div>
+                  <div class="product-categories-card__details">
+                    <h3 class="product-categories-card__name">
+                      Супермаркеты
+                    </h3>
+                    <button class="product-categories-card__btn btn">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="categories__item swiper-slide">
+              <article class="product-categories-card">
+
+                <div class="product-categories-card__img">
+                  <img src="images/content/categories/1.png" alt="Супермаркеты">
+                </div>
+                <div class="product-categories-card__info">
+                  <div class="product-categories-card__overlay"></div>
+                  <div class="product-categories-card__details">
+                    <h3 class="product-categories-card__name">
+                      Супермаркеты
+                    </h3>
+                    <button class="product-categories-card__btn btn">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="categories__item swiper-slide">
+              <article class="product-categories-card">
+                <div class="product-categories-card__img">
+                  <img src="images/content/categories/1.png" alt="Супермаркеты">
+                </div>
+                <div class="product-categories-card__info">
+                  <div class="product-categories-card__overlay"></div>
+                  <div class="product-categories-card__details">
+                    <h3 class="product-categories-card__name">
+                      Супермаркеты
+                    </h3>
+                    <button class="product-categories-card__btn btn">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="categories__item swiper-slide">
+              <article class="product-categories-card">
+
+                <div class="product-categories-card__img">
+                  <img src="images/content/categories/1.png" alt="Супермаркеты">
+                </div>
+                <div class="product-categories-card__info">
+                  <div class="product-categories-card__overlay"></div>
+                  <div class="product-categories-card__details">
+                    <h3 class="product-categories-card__name">
+                      Супермаркеты
+                    </h3>
+                    <button class="product-categories-card__btn btn">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="categories__item swiper-slide">
+              <article class="product-categories-card">
+
+                <div class="product-categories-card__img">
+                  <img src="images/content/categories/1.png" alt="Супермаркеты">
+                </div>
+                <div class="product-categories-card__info">
+                  <div class="product-categories-card__overlay"></div>
+                  <div class="product-categories-card__details">
+                    <h3 class="product-categories-card__name">
+                      Супермаркеты
+                    </h3>
+                    <button class="product-categories-card__btn btn">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="categories__item swiper-slide">
+              <article class="product-categories-card">
+
+                <div class="product-categories-card__img">
+                  <img src="images/content/categories/1.png" alt="Супермаркеты">
+                </div>
+                <div class="product-categories-card__info">
+                  <div class="product-categories-card__overlay"></div>
+                  <div class="product-categories-card__details">
+                    <h3 class="product-categories-card__name">
+                      Супермаркеты
+                    </h3>
+                    <button class="product-categories-card__btn btn">Подробнее</button>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div class="categories__text">
+        <span>«Экспресс курьер»- оперативная доставка документов, товаров или подарков.</span>
+        <p>Предоставляем уникальную услугу «Экспресс курьер» для наших партнёров и клиентов. Вам не нужно делегировать
+          поручения сотрудникам по работе или знакомым. Занимайтесь работой, или отдыхайте, а наш курьер максимально
+          быстро доставит товар или документы адресату с соблюдением конфиденциальности и сохранности.</p>
+      </div>
+    </div>
+  </div>
+</section>
       <section class="steps">
   <div class="container">
     <div class="steps__top">

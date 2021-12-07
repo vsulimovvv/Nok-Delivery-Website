@@ -1,6 +1,11 @@
 .download {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
+
+  @include breakpointsMaxW($bp-container) {
+    padding-top: calc(30px + (80 - 30) * ((100vw - 375px) / (1170 - 375)));
+    padding-bottom: calc(30px + (40 - 50) * ((100vw - 375px) / (1170 - 375)));
+  }
 
   &__title {
     font-weight: bold;
