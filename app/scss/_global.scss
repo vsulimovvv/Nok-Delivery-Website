@@ -109,20 +109,222 @@ body {
   border-radius: 150px;
 }
 
+body.dark-theme {
+  --color-white: #302728;
+  --color-dark: #bebebe;
+  --color-blue-dark: #5187c5;
+  --color-background: #222;
+  --gradient: linear-gradient(225deg, rgb(32, 28, 28) 0%, #2e1d1f 98.23%);
+
+  .hero {
+    color: #bebebe;
+
+    @include breakpointsMaxW($bp-container) {
+      &__offer {
+        background-color: #38292b;
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  .menu {
+    &__link {
+      color: #bebebe;
+    }
+
+    &__tools {
+      color: #bebebe;
+    }
+  }
+
+  .advantages {
+    &__item {
+      &::before {
+        background-color: #444444;
+      }
+
+      box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .about-text {
+    background: linear-gradient(225deg, rgb(32, 28, 28) 0%, #2e1d1f 98.23%);
+    color: #bebebe;
+  }
+
+  .product-categories-card {
+    &:hover {
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    &__overlay {
+      background-color: #251717;
+
+      &::after,
+      &::before {
+        background-color: #dedede;
+      }
+    }
+
+    &__name {
+      color: #bebebe;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: #251717;
+
+    &::after {
+      background-color: #bebebe;
+    }
+  }
+
+  .download {
+    &__title {
+      span {
+        color: #1e4e85;
+      }
+    }
+
+    &__number {
+      color: #bebebe;
+      background-color: #1e4e85;
+    }
+  }
+
+  .cooperation-card {
+    &__name {
+      color: #bebebe;
+    }
+
+    &::after {
+      background: initial;
+      background-color: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+      filter: drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.5));
+    }
+
+    &::before {
+      background: initial;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__text {
+      color: #ebebeb;
+    }
+  }
+
+  .contacts {
+    &__info {
+      background-color: #382628;
+      color: #bebebe;
+    }
+
+    &__name {
+      color: #ebebeb;
+    }
+
+    &__icon {
+      background-color: #000;
+
+      &::before {
+        background-color: #ebebeb;
+      }
+    }
+
+    &__btn {
+      background-color: #325F93;
+      color: #ebebeb;
+    }
+  }
+
+  .socials {
+    &__link {
+      background-color: #000;
+
+      &::after {
+        background-color: #bebebe;
+      }
+    }
+  }
+
+  .footer {
+    color: #bebebe;
+
+    &__bottom {
+      border-color: #999;
+    }
+  }
+
+  .toggle-theme {
+    border: 1px solid #999;
+
+    &__circle {
+      background-color: #999;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      border: 1px solid #999;
+
+      .toggle-theme__circle {
+        background-color: #999;
+      }
+    }
+  }
+
+  .simplebar-scrollbar::before {
+    background-color: #ebebeb;
+  }
+}
+
+.toggle-theme {
+  position: absolute;
+  background-color: transparent;
+  z-index: 100;
+  width: 50px;
+  height: 26px;
+  top: 150px;
+  right: 15px;
+  border: 1px solid var(--color-blue);
+  border-radius: 100px;
+  padding: 1px 3px;
+  transition: 150ms ease-in;
+
+  &__circle {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-blue);
+    border-radius: 50%;
+    transition: 200ms ease-in;
+  }
+
+  &.active {
+    .toggle-theme__circle {
+      transform: translateX(20px);
+    }
+  }
+
+  @include breakpointsMaxW($bp-991) {
+    position: initial;
+    margin-left: auto;
+    margin-right: 30px;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 20px;
+    border: 1px solid var(--color-blue);
+
+    .toggle-theme__circle {
+      width: 14px;
+      height: 14px;
+      background-color: var(--color-blue);
+    }
+  }
+}
 
 
-//    &:focus {
-//   border: 1px solid var(--color-blue-dark);
-// }
-
-// &:hover {
-//   background-color: rgba(43, 195, 111, 0.2);
-// }
-
-// &:active {
-//   border: 1px solid var(--color-blue-dark);
-//   background-color: rgba(35, 83, 138, 0.2);
-// }
 
 .simplebar-scrollbar::before {
   background-color: var(--color-green);

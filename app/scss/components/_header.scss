@@ -1,5 +1,4 @@
 .header {
-  // background-color: var(--color-green);
   position: absolute;
   top: 0;
   left: 0;
@@ -18,9 +17,7 @@
   }
 
   &__menu {
-
     @include breakpointsMaxW($bp-991) {
-      // display: none !important;
       position: absolute;
       top: 0;
       left: 0;
@@ -30,7 +27,7 @@
       transform: translateX(-100%);
 
       background-color: var(--color-green);
-      background-color: rgba(1, 1, 1, 0.6);
+      background-color: rgba(1, 1, 1, 0.7);
       backdrop-filter: blur(20px);
       transition: 550ms ease;
 
