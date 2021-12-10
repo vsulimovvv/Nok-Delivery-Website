@@ -72,20 +72,20 @@
       <div class="form__row">
         <div class="form__group">
           <label for="lastname">Фамилия:</label>
-          <input class="form__input" type="text" name="lastname" id="lastname" required>
+          <input class="form__input" type="text" id="lastname" name="lastname" required>
         </div>
         <div class="form__group">
           <label for="patronymic">Отчество:</label>
-          <input class="form__input" type="text" name="patronymic" id="patronymic" required>
+          <input class="form__input" type="text" id="patronymic" name="patronymic" required>
         </div>
         <div class="form__group">
           <label for="age">Ваш возраст:</label>
-          <input class="form__input" type="number" name="age" id="age" required>
+          <input class="form__input" type="number" id="age" name="age" required>
         </div>
       </div>
       <div class="form__row">
         <div class="form__group">
-          <label for="">Желаемая позиция:</label>
+          <label>Желаемая позиция:</label>
           <div class="checks">
             <label class="check">
               <input class="check__input" type="checkbox" checked>
@@ -108,21 +108,21 @@
       <div class="form__row">
         <div class="form__group">
           <label for="address">Адрес проживания:</label>
-          <input class="form__input" type="text" name="address" id="address" required>
+          <input class="form__input" type="text" id="address" name="address" required>
         </div>
         <div class="form__group">
           <label for="email">Эл.почта:</label>
-          <input class="form__input" type="email" name="email" id="email" required>
+          <input class="form__input" type="email" id="email" name="email" required>
         </div>
         <div class="form__group">
           <label for="tel">Телефон:</label>
-          <input class="form__input" type="tel" name="tel" id="tel" required>
+          <input class="form__input" type="tel" id="tel" name="tel" required>
         </div>
       </div>
 
       <div class="form__add-file input-file">
-        <input name="file" type="file" name="file" id="input__file" class="input-file__file" multiple>
-        <label for="input__file" class="input-file__button">
+        <input class="input-file__file" type="file" id="file" name="file" multiple>
+        <label for="file" class="input-file__button">
           <span class="input-file__text">Выберите файл</span>
         </label>
       </div>
@@ -146,11 +146,10 @@
       <p> Наша компания, NOK Delivery, обеспечивает максимальный комфорт для клиента, сервис и скорость. Мы
         позаботимся
         о качестве услуг, и несём ответственность за качественную и быструю доставку товара.
-        Доставка осуществляется собственным транспортом, при взаимодействии Call-центра и курьера.
-        <p>
-          Компания тщательно подходит к выбору партнеров, основываясь на качестве продукции, времени отдачи товара
-          курьеру, ассортименте и прочем.</p>
-      </p>
+        Доставка осуществляется собственным транспортом, при взаимодействии Call-центра и курьера.</p>
+      <p>
+        Компания тщательно подходит к выбору партнеров, основываясь на качестве продукции, времени отдачи товара
+        курьеру, ассортименте и прочем.</p>
       <div class="popup__plans popup-plans">
         <h3 class="popup__subtitle">Наши планы по масштабированию проекта:
         </h3>
@@ -181,8 +180,8 @@
     </div>
 
     <div class="popup__bottom">
-      <button class="popup__btn btn popup__btn--bordered">Скачать презентацию</button>
-      <button class="popup__btn btn">Скачать коммерческое предложение</button>
+      <button class="popup__btn btn popup__btn--bordered" type="button">Скачать презентацию</button>
+      <button class="popup__btn btn" type="button">Скачать коммерческое предложение</button>
     </div>
   </div>
 </div>
@@ -195,12 +194,12 @@
 
     <form class="form form--popup">
       <div class="form__group">
-        <label for="lastname">Ваше имя:</label>
-        <input class="form__input" type="text" name="name" id="name" required>
+        <label for="name">Ваше имя:</label>
+        <input class="form__input" type="text" id="name" name="name" required>
       </div>
       <div class="form__group">
-        <label for="patronymic">Ваш номер:</label>
-        <input class="form__input" type="tel" name="tel" id="tel" required>
+        <label for="tel-back-call">Ваш номер:</label>
+        <input class="form__input" type="tel" id="tel-back-call" name="tel" required>
       </div>
 
       <button class="form__submit" type="submit">Отправить</button>
@@ -216,16 +215,16 @@
 
     <form class="form form--popup">
       <div class="form__group">
-        <label for="lastname">Ваше имя:</label>
-        <input class="form__input" type="text" name="name" id="name" required>
+        <label for="name-write">Ваше имя:</label>
+        <input class="form__input" id="name-write" type="text" name="name" required>
       </div>
       <div class="form__group">
-        <label for="patronymic">Ваш email:</label>
-        <input class="form__input" type="email" name="email" id="email" required>
+        <label for="email-write">Ваш email:</label>
+        <input class="form__input" id="email-write" type="email" name="email" required>
       </div>
       <div class="form__group">
-        <label for="patronymic">Сообщение:</label>
-        <textarea class="form__input form__input--textarea" type="text" name="message" id="message" required></textarea>
+        <label for="message-write">Сообщение:</label>
+        <textarea class="form__input form__input--textarea" id="message-write" name="message" required></textarea>
       </div>
 
       <div class="form__actions">
