@@ -15,6 +15,7 @@ body {
 
 .main {
   padding-top: 103px;
+  height: 100%;
 }
 
 .container {
@@ -102,9 +103,27 @@ body {
   font-size: 12px;
   line-height: 12px;
   text-transform: uppercase;
-  background: var(--color-blue-dark);
+  background-color: var(--color-blue-dark);
   color: var(--color-white);
   padding: 18px 21px;
   border-radius: 150px;
 }
 
+
+
+//    &:focus {
+//   border: 1px solid var(--color-blue-dark);
+// }
+
+// &:hover {
+//   background-color: rgba(43, 195, 111, 0.2);
+// }
+
+// &:active {
+//   border: 1px solid var(--color-blue-dark);
+//   background-color: rgba(35, 83, 138, 0.2);
+// }
+
+.simplebar-scrollbar::before {
+  background-color: var(--color-green);
+}

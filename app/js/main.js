@@ -52,3 +52,46 @@ const showMenu = () => {
 
 };
 showMenu();
+
+//  Modal
+const modals = () => {
+  function bindModal(openBtn, modal, close) {
+    const openBtnEl = document.querySelectorAll(openBtn);
+    const modalEl = document.querySelector(modal);
+    const closeEl = document.querySelectorAll(close);
+    const body = document.querySelector('body');
+
+    if (modalEl) {
+      openBtnEl.forEach(el => {
+        el.addEventListener('click', e => {
+
+          if (e.target) {
+            e.preventDefault()
+          }
+
+          modalEl.classList.add('active');
+          body.classList.add('no-scroll');
+        });
+      })
+
+      closeEl.forEach(btn => {
+        btn.addEventListener('click', e => {
+          modalEl.classList.remove('active');
+          body.classList.remove('no-scroll');
+        });
+      })
+
+      modalEl.addEventListener('click', e => {
+        if (e.target === modalEl) {
+          modalEl.classList.remove('active');
+          body.classList.remove('no-scroll');
+        }
+      })
+    };
+  };
+  bindModal('.menu__back-call', '.popup--back-call', '.popup__close');
+  bindModal('.contacts__btn', '.popup--write', '.popup__close');
+  bindModal('.partner-btn', '.popup--partner', '.popup__close');
+  bindModal('.courier-btn', '.popup--courier', '.popup__close');
+};
+modals();

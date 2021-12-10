@@ -1,5 +1,7 @@
-<div class="popup">
-  <div class="popup__container">
+<div class="popup popup--courier">
+  <div class="popup__container" data-simplebar>
+    <button class="popup__close" type="button" aria-label="Закрыть попап"></button>
+
     <h2 class="popup__title"><span>Стать курьером</span></h2>
     <div class="popup__content">
       <p> Предпочитаете движение и насыщенный событиями, новыми знакомствами стиль жизни, тогда вам точно к нам!
@@ -65,5 +67,172 @@
     </ul>
 
     <h2 class="popup__title">Для трудоустройства, заполните <span>данную анкету</span>.</h2>
+
+    <form class="form form--popup">
+      <div class="form__row">
+        <div class="form__group">
+          <label for="lastname">Фамилия:</label>
+          <input class="form__input" type="text" name="lastname" id="lastname" required>
+        </div>
+        <div class="form__group">
+          <label for="patronymic">Отчество:</label>
+          <input class="form__input" type="text" name="patronymic" id="patronymic" required>
+        </div>
+        <div class="form__group">
+          <label for="age">Ваш возраст:</label>
+          <input class="form__input" type="number" name="age" id="age" required>
+        </div>
+      </div>
+      <div class="form__row">
+        <div class="form__group">
+          <label for="">Желаемая позиция:</label>
+          <div class="checks">
+            <label class="check">
+              <input class="check__input" type="checkbox" checked>
+              <span class="check__box"></span>
+              <span class="check__label">Курьер</span>
+            </label>
+            <label class="check">
+              <input class="check__input" type="checkbox">
+              <span class="check__box"></span>
+              <span class="check__label">Оператор</span>
+            </label>
+          </div>
+        </div>
+        <div class="form__group form__group--experience">
+          <label for="year">Опыт работы:</label>
+          <input class="form__input" type="number" id="year" name="year" required>
+          <span class="form__text">лет</span>
+        </div>
+      </div>
+      <div class="form__row">
+        <div class="form__group">
+          <label for="address">Адрес проживания:</label>
+          <input class="form__input" type="text" name="address" id="address" required>
+        </div>
+        <div class="form__group">
+          <label for="email">Эл.почта:</label>
+          <input class="form__input" type="email" name="email" id="email" required>
+        </div>
+        <div class="form__group">
+          <label for="tel">Телефон:</label>
+          <input class="form__input" type="tel" name="tel" id="tel" required>
+        </div>
+      </div>
+
+      <div class="form__add-file input-file">
+        <input name="file" type="file" name="file" id="input__file" class="input-file__file" multiple>
+        <label for="input__file" class="input-file__button">
+          <span class="input-file__text">Выберите файл</span>
+        </label>
+      </div>
+
+      <div class="form__bottom">
+        <div class="form__actions">
+          <button class="form__submit" type="submit">Отправить</button>
+          <button class="form__reset" type="reset">Сросить</button>
+        </div>
+      </div>
+    </form>
   </div>
+</div>
+
+<div class="popup popup--partner">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть попап"></button>
+
+    <h2 class="popup__title"><span>Стать партнером</span></h2>
+    <div class="popup__content">
+      <p> Наша компания, NOK Delivery, обеспечивает максимальный комфорт для клиента, сервис и скорость. Мы
+        позаботимся
+        о качестве услуг, и несём ответственность за качественную и быструю доставку товара.
+        Доставка осуществляется собственным транспортом, при взаимодействии Call-центра и курьера.
+        <p>
+          Компания тщательно подходит к выбору партнеров, основываясь на качестве продукции, времени отдачи товара
+          курьеру, ассортименте и прочем.</p>
+      </p>
+      <div class="popup__plans popup-plans">
+        <h3 class="popup__subtitle">Наши планы по масштабированию проекта:
+        </h3>
+        <ul class="popup-plans__list">
+          <li class="popup-plans__item">
+            <span class="popup-plans__number">1</span>
+            <p class="popup-plans__text">Организовать доставку по требованию (поиск и доставка определенного товара,
+              не
+              входящего в перечень в
+              маркетплейсе компании, по запросу клиента.
+            </p>
+          </li>
+          <li class="popup-plans__item">
+            <span class="popup-plans__number">2</span>
+            <p class="popup-plans__text">
+              Услуга «Экспресс курьер»- предоставление курьера в аренду любому из партнеров и клиентов.
+            </p>
+          </li>
+          <li class="popup-plans__item">
+            <span class="popup-plans__number">3</span>
+            <p class="popup-plans__text">Размещение промежуточных стационарных базовых станций (офисов), в наиболее
+              нагруженных районах, для
+              дислокации курьеров обслуживающих данную зону покрытия.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="popup__bottom">
+      <button class="popup__btn btn popup__btn--bordered">Скачать презентацию</button>
+      <button class="popup__btn btn">Скачать коммерческое предложение</button>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--back-call">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть попап"></button>
+
+    <h2 class="popup__title">Обратный<span>звонок:</span></h2>
+
+    <form class="form form--popup">
+      <div class="form__group">
+        <label for="lastname">Ваше имя:</label>
+        <input class="form__input" type="text" name="name" id="name" required>
+      </div>
+      <div class="form__group">
+        <label for="patronymic">Ваш номер:</label>
+        <input class="form__input" type="tel" name="tel" id="tel" required>
+      </div>
+
+      <button class="form__submit" type="submit">Отправить</button>
+    </form>
+  </div>
+</div>
+
+<div class="popup popup--write">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть попап"></button>
+
+    <h2 class="popup__title">Написать <span>нам:</span></h2>
+
+    <form class="form form--popup">
+      <div class="form__group">
+        <label for="lastname">Ваше имя:</label>
+        <input class="form__input" type="text" name="name" id="name" required>
+      </div>
+      <div class="form__group">
+        <label for="patronymic">Ваш email:</label>
+        <input class="form__input" type="email" name="email" id="email" required>
+      </div>
+      <div class="form__group">
+        <label for="patronymic">Сообщение:</label>
+        <textarea class="form__input form__input--textarea" type="text" name="message" id="message" required></textarea>
+      </div>
+
+      <div class="form__actions">
+        <button class="form__submit" type="submit">Отправить</button>
+        <button class="form__reset" type="reset">Сросить</button>
+      </div>
+    </form>
+  </div>
+
 </div>
