@@ -18,7 +18,7 @@
         background-color: var(--color-purple);
 
         &::after {
-          @include backgroundImage(url('../images/icons/step-1.svg'), contain);
+          @include backgroundImage(url('../images/content/steps/2.png'), contain);
         }
       }
     }
