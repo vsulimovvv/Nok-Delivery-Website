@@ -15,12 +15,20 @@
     position: relative;
     transition: 200ms ease;
 
+    &:focus {
+      outline: 1px solid #222;
+    }
+
     &:hover {
       transform: scale(1.2);
 
       &::after {
         background-color: var(--color-green);
       }
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, 0.5);
     }
 
     &::after {
@@ -30,7 +38,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: var(--color-background);
+      background-color: #c4c4c4;
       transition: 200ms;
     }
 

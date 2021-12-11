@@ -107,4 +107,35 @@ window.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('selected-theme', getCurrentTheme());
     });
   }());
+
+  //* Show scroll top
+  function scrollTop() {
+    const scrollTopEl = document.getElementById('scroll-top');
+    if (this.scrollY >= 560) {
+      scrollTopEl.classList.add('show-scroll');
+    } else {
+      scrollTopEl.classList.remove('show-scroll');
+    }
+  }
+  window.addEventListener('scroll', scrollTop);
+
+
+  //* Change Background Header
+  function scrollHeader() {
+    const nav = document.querySelector('header');
+
+    if (this.scrollY >= 100) {
+      nav.classList.add('scroll-header');
+    } else {
+      nav.classList.remove('scroll-header');
+    }
+  }
+  window.addEventListener('scroll', scrollHeader);
+  
+  // ! Change
+  const header = document.querySelector('header');
+  if (window.pageYOffset >= 100) {
+    console.log(1);
+    header.classList.add('scroll-header');
+  }
 });

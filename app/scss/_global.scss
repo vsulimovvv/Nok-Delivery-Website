@@ -107,6 +107,20 @@ body {
   color: var(--color-white);
   padding: 18px 21px;
   border-radius: 150px;
+  transition: 150ms ease;
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+  }
+
+  &:hover {
+    transform: translateY(3px);
+  }
+
+  &:active {
+    box-shadow: inset 0px 7px 4px rgba(0, 0, 0, 0.25);
+    transform: scale(0.98);
+  }
 }
 
 body.dark-theme {
@@ -115,6 +129,10 @@ body.dark-theme {
   --color-blue-dark: #5187c5;
   --color-background: #222;
   --gradient: linear-gradient(225deg, rgb(32, 28, 28) 0%, #2e1d1f 98.23%);
+
+  .scroll-header {
+    background: linear-gradient(225deg, rgb(47, 43, 43) 0%, #412528 98.23%);
+  }
 
   .hero {
     color: #bebebe;
@@ -253,7 +271,7 @@ body.dark-theme {
     color: #bebebe;
 
     &__bottom {
-      border-color: #999;
+      border-color: #444;
     }
   }
 
@@ -291,6 +309,19 @@ body.dark-theme {
   padding: 1px 3px;
   transition: 150ms ease-in;
 
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    box-shadow: inset 0px 7px 4px rgba(0, 0, 0, 0.25);
+    transform: scale(0.98);
+  }
+
   &__circle {
     display: block;
     width: 20px;
@@ -324,8 +355,152 @@ body.dark-theme {
   }
 }
 
-
-
 .simplebar-scrollbar::before {
   background-color: var(--color-green);
+}
+
+.check {
+  position: relative;
+  cursor: pointer;
+  padding-left: 53px;
+  max-width: 120px;
+  width: 100%;
+  height: 45px;
+
+  &__input {
+    position: absolute;
+    appearance: none;
+    border: none;
+  }
+
+  &__box {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #EEEEEE;
+
+    &:focus {
+      border: 1px solid var(--color-blue-dark);
+    }
+
+    &:hover {
+      background-color: rgba(63, 221, 134, 0.2);
+    }
+
+    &:active {
+      border: 1px solid var(--color-blue-dark);
+      background-color: rgba(35, 83, 138, 0.2);
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  &__input:checked+&__box {
+    background-image: url('../images/icons/check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+// * Input type file
+.input-file {
+  width: 100%;
+  position: relative;
+  margin: 15px 0;
+  text-align: center;
+  height: 44px;
+  display: flex;
+  align-items: flex-start;
+
+  &__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+
+  &__button {
+    max-width: 295px;
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+    color: var(--color-dark);
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 150px;
+    cursor: pointer;
+    padding: 10px 40px;
+
+    &:focus {
+      border: 1px solid var(--color-blue-dark);
+    }
+
+    &:hover {
+      background-color: rgba(63, 221, 134, 0.2);
+    }
+
+    &:active {
+      border: 1px solid var(--color-blue-dark);
+      background-color: rgba(35, 83, 138, 0.2);
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding-left: 23px;
+
+    &::after {
+      @include pseudoElDefault();
+      width: 15px;
+      height: 15px;
+      @include maskImage(url('../images/icons/add-file.svg'), contain);
+      background-color: var(--color-dark);
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+// * ==== Scroll Top
+.scroll {
+  position: fixed;
+  right: 16px;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 8px;
+  border-radius: 8px;
+  transition: 400ms;
+  background-color: var(--color-green);
+  z-index: 1000;
+  opacity: 0.3;
+  visibility: hidden;
+
+  svg {
+    transform: rotate(-90deg);
+    width: 30px;
+    height: 30px;
+    fill: var(--color-white);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.show-scroll {
+    visibility: visible;
+    bottom: 25px;
+  }
 }

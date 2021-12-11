@@ -14,5 +14,55 @@
     display: flex;
     align-items: center;
     gap: 20px;
+
+    a {
+      transition: 150ms ease;
+
+      &:focus {
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+      }
+
+      &:hover {
+        transform: translateY(3px);
+      }
+
+      &:active {
+        box-shadow: inset 0px 7px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
   }
+
+  &__link {
+    position: relative;
+
+    &::before {
+      @include pseudoElDefault();
+      width: 100%;
+      height: 1px;
+      background-color: #ededed;
+      bottom: 0;
+      left: 0;
+      transition: 150ms ease;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:focus {
+      outline: 1px solid #edeede;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+        visibility: visible;
+        bottom: -3px;
+      }
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__back-call {}
 }

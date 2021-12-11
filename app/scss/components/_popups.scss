@@ -39,6 +39,10 @@
       font-size: 12px;
       line-height: 18px;
 
+      &:focus {
+        box-shadow: 0 0 0 3px rgba(1, 1, 1, 0.5);
+      }
+
       @include breakpointsMaxW($bp-768) {
         width: 100%;
       }
