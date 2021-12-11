@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @include('./components/base/_meta.html')
+  @include('./components/base/_links.html')
+
+  <title>Nok Delivery</title>
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <!--* Scroll Top -->
+    <a class="scroll" href="#" id="scroll-top">
+      <svg>
+        <use xlink:href="images/sprite.svg#arrow"></use>
+      </svg>
+    </a>
+
+    @include('./components/popups/_popup.html')
+    @include('./components/_header.html')
+    <main class="main">
+      @include('./components/_hero.html')
+      @include('./components/_section-advantages.html')
+      @include('./components/_section-about-text.html')
+      @include('./components/_section-about.html')
+      @include('./components/_section-categories.html')
+      @include('./components/_section-steps.html')
+      @include('./components/_section-download.html')
+      @include('./components/_section-cooperation.html')
+      @include('./components/_section-contacts.html')
+    </main>
+    @include('./components/_footer.html')
+  </div>
+
+  @include('./components/base/_scripts.html')
+</body>
+
+</html>
