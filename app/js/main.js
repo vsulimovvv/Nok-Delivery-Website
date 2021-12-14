@@ -1,27 +1,31 @@
 window.addEventListener('DOMContentLoaded', () => {
+  AOS.init();
+
   // * ==== Slider
-  const swiper = new Swiper(".categories__slider", {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 10,
+  (function slider() {
+    const swiper = new Swiper(".categories__slider", {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-      991: {
-        slidesPerView: 4,
-        spaceBetween: 20,
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        991: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        }
       }
-    }
-  });
+    });
+  })();
 
   // * ==== Menu
   (function showMenu() {
@@ -108,7 +112,16 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }());
 
-  //* Show scroll top
+  // * ==== Change
+  (function changeHeader() {
+    const header = document.querySelector('header');
+    if (window.pageYOffset >= 100) {
+      console.log(1);
+      header.classList.add('scroll-header');
+    }
+  })();
+
+  //* ==== Show scroll top
   function scrollTop() {
     const scrollTopEl = document.getElementById('scroll-top');
     if (this.scrollY >= 560) {
@@ -117,10 +130,8 @@ window.addEventListener('DOMContentLoaded', () => {
       scrollTopEl.classList.remove('show-scroll');
     }
   }
-  window.addEventListener('scroll', scrollTop);
 
-
-  //* Change Background Header
+  //* ==== Change Background Header
   function scrollHeader() {
     const nav = document.querySelector('header');
 
@@ -130,12 +141,7 @@ window.addEventListener('DOMContentLoaded', () => {
       nav.classList.remove('scroll-header');
     }
   }
+
   window.addEventListener('scroll', scrollHeader);
-  
-  // ! Change
-  const header = document.querySelector('header');
-  if (window.pageYOffset >= 100) {
-    console.log(1);
-    header.classList.add('scroll-header');
-  }
+  window.addEventListener('scroll', scrollTop);
 });
